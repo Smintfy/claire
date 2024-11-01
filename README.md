@@ -5,4 +5,4 @@ Feel free to contribute.
 
 Name is taken from Claire François from the _I'm in Love with the Villainess_ series.
 
-**NOTE**: Build for Linux and Windows is not supported, see [examples](https://github.com/Smintfy/claire/blob/main/rebuild.c/).
+**NOTE**: Build for Windows is not supported, see [examples](https://github.com/Smintfy/claire/blob/main/rebuild.c/).
