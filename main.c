@@ -14,7 +14,7 @@
 
 static struct lws_context *context = NULL;
 static int interrupt = 0;
-char *bot_token;
+// char *bot_token;
 
 static void sigint_handler(int sig) { interrupt = 1;}
 
@@ -29,8 +29,8 @@ static struct lws_protocols protocols[] = {
 
 int main(void)
 {
-    env_load(".", false);
-    bot_token = getenv("BOT_TOKEN");
+    // env_load(".", false);
+    // bot_token = getenv("BOT_TOKEN");
 
     signal(SIGINT, sigint_handler);
     signal(SIGTERM, sigint_handler);
@@ -67,7 +67,7 @@ int main(void)
         return 1;
     }
 
-    while (!interrupt) lws_service(context, 500);
+    while (!interrupt) lws_service(context, 500); /* timeout in ms */
 
     lws_context_destroy(context);
     lwsl_notice("Disconnected and cleaned up\n");

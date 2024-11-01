@@ -7,8 +7,8 @@
 #elif __APPLE__
     #define OPENSSL "-I/opt/homebrew/opt/openssl@3/include", "-L/opt/homebrew/opt/openssl@3/lib", "-lssl", "-lcrypto"
     #define LIBWEBSOCKETS "-I/opt/homebrew/opt/libwebsockets/include", "-L/opt/homebrew/opt/libwebsockets/lib", "-lwebsockets"
-#else
-    /* Linux */
+#elif __linux
+    /* Linux linker is not yet set */
 #endif
 void rebuild_project()
 {
